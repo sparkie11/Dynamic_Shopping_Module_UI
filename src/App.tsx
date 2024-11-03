@@ -4,13 +4,14 @@ import { Home } from "./components/Home";
 import { About } from "./components/About";
 import { Store } from "./components/Store";
 import { Navbar } from "./components/Navbar";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 function App() {
 
   return (
-    <>
-    <Container className="mb-4">
+    <ShoppingCartProvider>
       <Navbar/>
+    <Container className="mb-4">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -18,7 +19,7 @@ function App() {
       </Routes>
     </Container>
 
-    </>
+    </ShoppingCartProvider>
   )
 }
 
