@@ -7,7 +7,7 @@ export function Store(){
         <>
     <h1> store </h1>
 
-    <Row>
+    <Row md={2} xs={1} lg={3} className="g-3">
         {storeItems.map(item =>  (
         <Col>
         {JSON.stringify(item)}
